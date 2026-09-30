@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0d10">
+<title>Satyam Book Depo</title>
+<style>
+:root{--bg:#f6f7f9;--ink:#111318;--muted:#747983;--line:#e8e9ed;--dark:#0b0d10;--accent:#ffb31a;--accent2:#ffd86b;--green:#16a06b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink)}
+button,input,textarea{font:inherit}.shell{max-width:520px;margin:auto;min-height:100vh;background:#fff;box-shadow:0 0 40px #00000012}
+.top{background:var(--dark);color:#fff;padding:18px 18px 22px;position:relative;overflow:hidden}.top:after{content:"";position:absolute;width:210px;height:210px;border-radius:50%;right:-100px;top:-115px;background:#ffb31a22}
+.nav{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}.logo{display:flex;align-items:center;gap:10px}.logoMark{width:40px;height:40px;border-radius:13px;background:linear-gradient(145deg,#ffd86b,#f59d00);display:grid;place-items:center;color:#111;font-size:20px;font-weight:900;box-shadow:0 8px 20px #ffb31a30}.brand{font-weight:850;letter-spacing:-.4px}.brand small{display:block;color:#9ea3ad;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;margin-top:2px}.contact{color:#fff;text-decoration:none;font-size:12px;font-weight:750;border:1px solid #ffffff20;border-radius:99px;padding:9px 11px;background:#ffffff0b}
+.hero{padding:30px 18px 28px;position:relative;z-index:1}.eyebrow{color:#ffd166;font-size:11px;font-weight:850;letter-spacing:1.5px;text-transform:uppercase}.hero h1{font-size:39px;line-height:1.02;letter-spacing:-1.8px;margin:9px 0 12px;max-width:430px}.hero p{margin:0;color:#b9bec8;line-height:1.55;font-size:14px;max-width:420px}.heroActions{display:flex;gap:9px;margin-top:22px}.btn{border:0;border-radius:14px;padding:14px 15px;font-weight:800;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:7px;cursor:pointer}.primary{background:var(--accent);color:#111;box-shadow:0 10px 24px #ffb31a22;flex:1}.ghost{background:#ffffff0c;color:#fff;border:1px solid #ffffff18}.heroStats{display:flex;gap:9px;margin-top:20px}.stat{background:#ffffff09;border:1px solid #ffffff10;border-radius:14px;padding:11px 12px;flex:1}.stat b{display:block;font-size:14px}.stat span{font-size:10px;color:#9ea3ad}
+main{padding:18px}.sectionTitle{display:flex;align-items:end;justify-content:space-between;margin:5px 0 11px}.sectionTitle h2{margin:0;font-size:20px;letter-spacing:-.5px}.sectionTitle span{font-size:11px;color:#969aa3}.features{display:grid;grid-template-columns:1fr 1fr;gap:10px}.feature{padding:16px;border:1px solid var(--line);border-radius:17px;background:linear-gradient(145deg,#fff,#fafafa)}.ico{width:38px;height:38px;border-radius:12px;background:#fff4d4;display:grid;place-items:center;font-size:18px;margin-bottom:12px}.feature b{font-size:13px}.feature p{font-size:11px;color:var(--muted);line-height:1.4;margin:5px 0 0}
+.shopCard{margin-top:18px;border-radius:20px;background:#111;color:#fff;padding:18px;position:relative;overflow:hidden}.shopCard:after{content:"";position:absolute;right:-35px;bottom:-60px;width:160px;height:160px;border-radius:50%;border:28px solid #ffb31a16}.shopCard h3{margin:0 0 7px;font-size:17px}.shopCard p{margin:0;color:#aeb4be;font-size:12px;line-height:1.5;max-width:380px}.address{margin-top:13px;font-size:11px;color:#d5d8de}.shopLinks{display:flex;gap:8px;margin-top:15px}.shopLinks a{color:#111;background:#fff;text-decoration:none;font-size:11px;font-weight:800;border-radius:10px;padding:10px 12px}.shopLinks a:last-child{background:#ffb31a}
+.screen{display:none}.screen.active{display:block}.back{display:flex;align-items:center;gap:9px;margin-bottom:14px;color:#656a73;font-size:12px;font-weight:750;cursor:pointer}.stepbar{display:flex;gap:5px;margin:2px 0 18px}.step{height:4px;flex:1;border-radius:99px;background:#e8e9ed}.step.active{background:#111}.step.done{background:var(--accent)}
+.card{border:1px solid var(--line);border-radius:18px;padding:16px;background:#fff;box-shadow:0 8px 30px #00000005;margin-bottom:12px}.card h2{font-size:21px;letter-spacing:-.6px;margin:0 0 5px}.muted{color:var(--muted);font-size:12px;line-height:1.5;margin:0}.upload{border:1.5px dashed #cfd2d8;border-radius:16px;padding:24px 15px;text-align:center;background:#fafafa;cursor:pointer;margin-top:12px}.upload .big{font-size:30px}.upload b{display:block;margin-top:6px;font-size:13px}.upload span{display:block;color:#8b9099;font-size:11px;margin-top:4px}.hiddenFile{display:none}
+label{display:block;font-size:11px;font-weight:800;margin:14px 0 6px;color:#4b5058}input,textarea{width:100%;border:1px solid #dedfe3;border-radius:12px;padding:12px 13px;outline:none;background:#fff;color:#111}input:focus,textarea:focus{border-color:#111;box-shadow:0 0 0 3px #11111108}textarea{min-height:92px;resize:vertical}
+.item{display:grid;grid-template-columns:1fr 72px 36px;gap:7px;margin-top:8px}.item button{border:1px solid #ddd;background:#fff;border-radius:11px;color:#777;cursor:pointer}.add{width:100%;margin-top:10px;border:1px dashed #cfd2d8;background:#fafafa;border-radius:12px;padding:11px;font-weight:800;font-size:12px;cursor:pointer}
+.choice{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:13px}.choice label{margin:0;position:relative}.choice input{position:absolute;opacity:0}.choice .choiceBox{border:1px solid #ddd;border-radius:15px;padding:15px 12px;cursor:pointer}.choice strong{display:block;font-size:13px}.choice small{display:block;color:#888;margin-top:3px;font-size:10px}.choice input:checked+.choiceBox{border:2px solid #111;background:#fff9e9}
+.bottomActions{display:flex;gap:9px;margin-top:14px}.bottomActions button{flex:1;border:0;border-radius:13px;padding:14px;font-weight:850;cursor:pointer}.secondary{background:#f1f2f4;color:#222}.continue{background:#111;color:#fff}.continue.gold{background:var(--accent);color:#111}
+.summary{background:#f7f7f8;border-radius:14px;padding:13px;font-size:11px;line-height:1.7}.summary b{font-size:12px}
+.success{text-align:center;padding:22px 4px 8px}.successIcon{width:68px;height:68px;border-radius:50%;background:#e7f7ef;color:var(--green);display:grid;place-items:center;font-size:32px;margin:8px auto 15px}.orderNo{display:inline-block;background:#f2f2f3;padding:7px 10px;border-radius:99px;font-size:11px;font-weight:850;margin:10px}.pay{margin-top:15px;background:#111;color:#fff;border-radius:18px;padding:17px;text-align:left}.pay b{font-size:13px}.pay p{color:#aaa;font-size:10px;line-height:1.5}.qrPlaceholder{height:150px;border-radius:13px;background:repeating-linear-gradient(45deg,#222,#222 5px,#292929 5px,#292929 10px);display:grid;place-items:center;margin-top:12px;color:#ddd;font-size:11px;text-align:center}
+.adminLink{display:block;text-align:center;margin:22px 0 4px;color:#9b9da4;font-size:10px;cursor:pointer;text-decoration:underline}.adminOrder{border:1px solid var(--line);border-radius:14px;padding:13px;margin:9px 0;font-size:11px}.pill{display:inline-block;background:#fff1c9;padding:4px 7px;border-radius:99px;font-size:9px;font-weight:850;margin-left:5px}.empty{padding:30px;text-align:center;color:#999;font-size:12px}
+footer{text-align:center;padding:18px;color:#9a9da5;font-size:10px}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="top">
+<div class="nav"><div class="logo"><div class="logoMark">S</div><div class="brand">SATYAM BOOK DEPO<small>NALASOPARA EAST</small></div></div><a class="contact" href="tel:7387948995">📞 73879 48995</a></div>
+<div class="hero">
+<div class="eyebrow">Books • Stationery • Bulk Orders</div>
+<h1>Your list.<br>Our shop.<br>One easy order.</h1>
+<p>School, office ya shop ke liye bulk stationery chahiye? Bas apni list bhejo. Hum current stock aur price check karke tumhe confirm karenge.</p>
+<div class="heroActions"><button class="btn primary" onclick="showScreen('order1')">Start Bulk Order →</button><a class="btn ghost" href="https://wa.me/917387948995" target="_blank">WhatsApp</a></div>
+<div class="heroStats"><div class="stat"><b>100+</b><span>Items available</span></div><div class="stat"><b>2 options</b><span>Delivery / Pickup</span></div><div class="stat"><b>₹0</b><span>Price shown online</span></div></div>
+</div>
+</header>
+
+<main>
+<div id="home" class="screen active">
+<div class="sectionTitle"><h2>How it works</h2><span>3 simple steps</span></div>
+<div class="features">
+<div class="feature"><div class="ico">📸</div><b>Send your list</b><p>Photo/PDF upload karo ya items manually add karo.</p></div>
+<div class="feature"><div class="ico">🔎</div><b>We check</b><p>Shop mein stock aur current price check hoga.</p></div>
+<div class="feature"><div class="ico">🚚</div><b>Choose delivery</b><p>Home delivery ya shop pickup select karo.</p></div>
+<div class="feature"><div class="ico">💳</div><b>Pay after confirm</b><p>Final amount confirm hone ke baad payment.</p></div>
+</div>
+<div class="shopCard"><h3>Visit Satyam Book Depo</h3><p>Books, notebooks, pens, school supplies aur general stationery ke bulk requirements ke liye contact karo.</p><div class="address">📍 Shop No. 1, Anuradha Building, Tulinj Road, Damodar Nagar, Nalasopara East, Vasai-Virar 401209</div><div class="shopLinks"><a href="tel:7387948995">Call Shop</a><a href="https://www.google.com/maps/search/?api=1&query=Satyam+Book+Depo+Nalasopara+East" target="_blank">Open Maps</a></div></div>
+<a class="adminLink" onclick="showScreen('admin')">Admin dashboard</a>
+</div>
+
+<div id="order1" class="screen">
+<div class="back" onclick="showScreen('home')">← Back to shop</div><div class="stepbar"><i class="step active"></i><i class="step"></i><i class="step"></i><i class="step"></i></div>
+<div class="card"><h2>Send your list</h2><p class="muted">Price ki tension mat lo — yahan sirf item aur quantity chahiye.</p>
+<label>Upload list</label><label class="upload" for="file"><div class="big">📄</div><b id="fileText">Photo / PDF choose karo</b><span>Handwritten list bhi chalegi</span></label><input class="hiddenFile" id="file" type="file" accept="image/*,.pdf" onchange="filePicked()">
+<label>Or add items manually</label><div id="items"></div><button class="add" onclick="addItem()">＋ Add another item</button>
+<label>Extra note</label><textarea id="note" placeholder="Example: 10 blue pens, A4 paper 2 boxes..."></textarea></div>
+<div class="bottomActions"><button class="secondary" onclick="showScreen('home')">Cancel</button><button class="continue" onclick="toOrder2()">Continue →</button></div>
+</div>
+
+<div id="order2" class="screen">
+<div class="back" onclick="showScreen('order1')">← Order list</div><div class="stepbar"><i class="step done"></i><i class="step active"></i><i class="step"></i><i class="step"></i></div>
+<div class="card"><h2>Your details</h2><p class="muted">Order ke liye basic contact details.</p>
+<label>Full name *</label><input id="name" placeholder="Enter your name">
+<label>Mobile number *</label><input id="mobile" inputmode="numeric" maxlength="10" placeholder="10-digit mobile number">
+<label>School / Company / Shop</label><input id="org" placeholder="Optional"></div>
+<div class="bottomActions"><button class="secondary" onclick="showScreen('order1')">← Back</button><button class="continue" onclick="toOrder3()">Continue →</button></div>
+</div>
+
+<div id="order3" class="screen">
+<div class="back" onclick="showScreen('order2')">← Your details</div><div class="stepbar"><i class="step done"></i><i class="step done"></i><i class="step active"></i><i class="step"></i></div>
+<div class="card"><h2>Delivery or pickup?</h2><p class="muted">Payment final price confirm hone ke baad.</p>
+<div class="choice"><label><input type="radio" name="mode" value="delivery" checked onchange="toggleMode()"><div class="choiceBox">🚚 <strong>Home Delivery</strong><small>Payment on delivery</small></div></label>
+<label><input type="radio" name="mode" value="pickup" onchange="toggleMode()"><div class="choiceBox">🏪 <strong>Shop Pickup</strong><small>Pay at shop</small></div></label></div>
+<div id="addressWrap"><label>Full delivery address *</label><textarea id="address" placeholder="Address + landmark"></textarea></div></div>
+<div class="card"><h2>Order summary</h2><div class="summary" id="summary"></div></div>
+<div class="bottomActions"><button class="secondary" onclick="showScreen('order2')">← Back</button><button class="continue gold" onclick="submitOrder()">Place Order ✓</button></div>
+</div>
+
+<div id="success" class="screen">
+<div class="success"><div class="successIcon">✓</div><h2>Request sent!</h2><p class="muted">Teri order request save ho gayi. Satyam Book Depo stock aur current price check karke contact karega.</p><div class="orderNo" id="orderNo"></div>
+<div class="pay"><b>Payment after confirmation</b><p>Final amount confirm hone ke baad UPI QR se payment kar sakte ho. Delivery mein cash/UPI on the spot; pickup mein shop par payment.</p><div class="qrPlaceholder">YOUR UPI QR<br><span style="opacity:.6">Actual QR yahan add hoga</span></div></div>
+<div class="bottomActions"><button class="secondary" onclick="resetOrder()">New Order</button><a class="continue btn" href="https://wa.me/917387948995" target="_blank">💬 WhatsApp Shop</a></div></div>
+</div>
+
+<div id="admin" class="screen">
+<div class="back" onclick="showScreen('home')">← Shop</div><div class="card"><h2>Admin dashboard</h2><p class="muted">Demo orders isi browser mein save hote hain.</p><div id="adminOrders"></div></div>
+</div>
+</main>
+<footer>© Satyam Book Depo · 7387948995</footer>
+</div>
+
+<script>
+let items=[{name:"",qty:""}];
+function showScreen(id){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'});if(id==='admin')renderAdmin();}
+function renderItems(){const box=document.getElementById('items');box.innerHTML=items.map((x,i)=>`<div class="item"><input placeholder="Item name" value="${esc(x.name)}" oninput="items[${i}].name=this.value"><input inputmode="numeric" placeholder="Qty" value="${esc(x.qty)}" oninput="items[${i}].qty=this.value"><button onclick="removeItem(${i})">×</button></div>`).join('');}
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;')}
+function addItem(){items.push({name:"",qty:""});renderItems();}
+function removeItem(i){if(items.length===1)return;items.splice(i,1);renderItems();}
+renderItems();
+function filePicked(){let f=document.getElementById('file').files[0];if(f)document.getElementById('fileText').textContent='✓ '+f.name;}
+function toOrder2(){let manual=items.filter(x=>x.name.trim());let file=document.getElementById('file').files.length;if(!manual.length&&!file){alert('List upload karo ya kam se kam ek item add karo.');return}showScreen('order2')}
+function toOrder3(){let n=document.getElementById('name').value.trim(),m=document.getElementById('mobile').value.trim();if(!n||!/^\d{10}$/.test(m)){alert('Name aur valid 10-digit mobile number bhar do.');return}updateSummary();showScreen('order3')}
+function toggleMode(){let delivery=document.querySelector('input[name=mode]:checked').value==='delivery';document.getElementById('addressWrap').style.display=delivery?'block':'none';}
+function updateSummary(){let manual=items.filter(x=>x.name.trim()).map(x=>`${esc(x.name)} × ${esc(x.qty||'1')}`).join('<br>')||'Uploaded list attached';let mode=document.querySelector('input[name=mode]:checked').value;document.getElementById('summary').innerHTML=`<b>${esc(document.getElementById('name').value)}</b><br>${manual}<br><br><b>${mode==='delivery'?'🚚 Home Delivery':'🏪 Shop Pickup'}</b>`}
+function submitOrder(){let mode=document.querySelector('input[name=mode]:checked').value;if(mode==='delivery'&&!document.getElementById('address').value.trim()){alert('Delivery address bhar do.');return}let order={id:'SBD-'+Math.floor(100000+Math.random()*900000),name:document.getElementById('name').value.trim(),mobile:document.getElementById('mobile').value.trim(),org:document.getElementById('org').value.trim(),mode,items:items.filter(x=>x.name.trim()),note:document.getElementById('note').value.trim(),file:document.getElementById('file').files[0]?.name||'',status:'New',time:new Date().toLocaleString()};let arr=JSON.parse(localStorage.getItem('sbd_orders')||'[]');arr.unshift(order);localStorage.setItem('sbd_orders',JSON.stringify(arr));document.getElementById('orderNo').textContent=order.id;showScreen('success')}
+function resetOrder(){items=[{name:"",qty:""}];renderItems();['name','mobile','org','address','note'].forEach(id=>document.getElementById(id).value='');document.getElementById('file').value='';document.getElementById('fileText').textContent='Photo / PDF choose karo';showScreen('home')}
+function renderAdmin(){let a=JSON.parse(localStorage.getItem('sbd_orders')||'[]'),box=document.getElementById('adminOrders');if(!a.length){box.innerHTML='<div class="empty">Abhi koi order nahi aaya.</div>';return}box.innerHTML=a.map(o=>`<div class="adminOrder"><b>${o.id}</b><span class="pill">${o.status}</span><br><b>${esc(o.name)}</b> · ${esc(o.mobile)}<br>${o.mode==='delivery'?'🚚 Delivery':'🏪 Pickup'}${o.file?'<br>📎 '+esc(o.file):''}<br><span style="color:#888">${o.items.length?o.items.map(i=>esc(i.name)+' × '+esc(i.qty)).join(', '):'Uploaded list'}<br>${esc(o.time)}</span></div>`).join('')}
+</script>
+</body>
+</html>
